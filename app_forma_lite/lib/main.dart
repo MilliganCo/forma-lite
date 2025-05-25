@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'core/theme.dart';
+import 'presentation/router.dart';
+
+void main() => runApp(const ProviderScope(child: FormaApp()));
+
+class FormaApp extends StatelessWidget {
+  const FormaApp({super.key});
+
+  @override
+  Widget build(BuildContext context) => MaterialApp.router(
+        title: 'Forma',
+        theme: lightTheme,
+        routerConfig: router,
+      );
+}

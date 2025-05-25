@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+
+class SceneEditorScreen extends StatelessWidget {
+  const SceneEditorScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+        child: Text('Scene Editor Screen'),
+      ),
+    );
+  }
+}

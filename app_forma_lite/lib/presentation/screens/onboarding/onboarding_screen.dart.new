@@ -1,0 +1,19 @@
+import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+class OnboardingScreen extends StatelessWidget {
+  const OnboardingScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () => Supabase.instance.client.auth.signInWithOtp(
+              email: 'demo@forma.app',
+              shouldCreateUser: true,
+            ),
+            child: const Text('Magic Link'),
+          ),
+        ),
+      );
+}
