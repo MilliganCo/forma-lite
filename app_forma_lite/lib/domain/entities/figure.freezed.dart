@@ -24,7 +24,7 @@ mixin _$Figure {
   String get id => throw _privateConstructorUsedError;
   String get shape => throw _privateConstructorUsedError;
   Map<String, dynamic> get baseMaterial => throw _privateConstructorUsedError;
-  String get rarity => throw _privateConstructorUsedError;
+  Rarity get rarity => throw _privateConstructorUsedError;
 
   /// Serializes this Figure to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -44,7 +44,7 @@ abstract class $FigureCopyWith<$Res> {
     String id,
     String shape,
     Map<String, dynamic> baseMaterial,
-    String rarity,
+    Rarity rarity,
   });
 }
 
@@ -89,7 +89,7 @@ class _$FigureCopyWithImpl<$Res, $Val extends Figure>
                 null == rarity
                     ? _value.rarity
                     : rarity // ignore: cast_nullable_to_non_nullable
-                        as String,
+                        as Rarity,
           )
           as $Val,
     );
@@ -108,7 +108,7 @@ abstract class _$$FigureImplCopyWith<$Res> implements $FigureCopyWith<$Res> {
     String id,
     String shape,
     Map<String, dynamic> baseMaterial,
-    String rarity,
+    Rarity rarity,
   });
 }
 
@@ -152,7 +152,7 @@ class __$$FigureImplCopyWithImpl<$Res>
             null == rarity
                 ? _value.rarity
                 : rarity // ignore: cast_nullable_to_non_nullable
-                    as String,
+                    as Rarity,
       ),
     );
   }
@@ -184,7 +184,7 @@ class _$FigureImpl implements _Figure {
   }
 
   @override
-  final String rarity;
+  final Rarity rarity;
 
   @override
   String toString() {
@@ -234,7 +234,7 @@ abstract class _Figure implements Figure {
     required final String id,
     required final String shape,
     required final Map<String, dynamic> baseMaterial,
-    required final String rarity,
+    required final Rarity rarity,
   }) = _$FigureImpl;
 
   factory _Figure.fromJson(Map<String, dynamic> json) = _$FigureImpl.fromJson;
@@ -246,7 +246,7 @@ abstract class _Figure implements Figure {
   @override
   Map<String, dynamic> get baseMaterial;
   @override
-  String get rarity;
+  Rarity get rarity;
 
   /// Create a copy of Figure
   /// with the given fields replaced by the non-null parameter values.
