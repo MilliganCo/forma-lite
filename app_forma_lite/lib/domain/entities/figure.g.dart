@@ -7,11 +7,11 @@ part of 'figure.dart';
 // **************************************************************************
 
 _$FigureImpl _$$FigureImplFromJson(Map<String, dynamic> json) => _$FigureImpl(
-  id: json['id'] as String,
-  shape: json['shape'] as String,
-  baseMaterial: json['baseMaterial'] as Map<String, dynamic>,
-  rarity: $enumDecode(_$RarityEnumMap, json['rarity']),
-);
+      id: json['id'] as String,
+      shape: json['shape'] as String,
+      baseMaterial: json['baseMaterial'] as Map<String, dynamic>,
+      rarity: $enumDecode(_$RarityEnumMap, json['rarity']),
+    );
 
 Map<String, dynamic> _$$FigureImplToJson(_$FigureImpl instance) =>
     <String, dynamic>{

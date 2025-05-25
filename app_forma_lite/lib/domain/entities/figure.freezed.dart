@@ -12,8 +12,7 @@ part of 'figure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Figure _$FigureFromJson(Map<String, dynamic> json) {
   return _Figure.fromJson(json);
@@ -40,12 +39,11 @@ abstract class $FigureCopyWith<$Res> {
   factory $FigureCopyWith(Figure value, $Res Function(Figure) then) =
       _$FigureCopyWithImpl<$Res, Figure>;
   @useResult
-  $Res call({
-    String id,
-    String shape,
-    Map<String, dynamic> baseMaterial,
-    Rarity rarity,
-  });
+  $Res call(
+      {String id,
+      String shape,
+      Map<String, dynamic> baseMaterial,
+      Rarity rarity});
 }
 
 /// @nodoc
@@ -68,48 +66,39 @@ class _$FigureCopyWithImpl<$Res, $Val extends Figure>
     Object? baseMaterial = null,
     Object? rarity = null,
   }) {
-    return _then(
-      _value.copyWith(
-            id:
-                null == id
-                    ? _value.id
-                    : id // ignore: cast_nullable_to_non_nullable
-                        as String,
-            shape:
-                null == shape
-                    ? _value.shape
-                    : shape // ignore: cast_nullable_to_non_nullable
-                        as String,
-            baseMaterial:
-                null == baseMaterial
-                    ? _value.baseMaterial
-                    : baseMaterial // ignore: cast_nullable_to_non_nullable
-                        as Map<String, dynamic>,
-            rarity:
-                null == rarity
-                    ? _value.rarity
-                    : rarity // ignore: cast_nullable_to_non_nullable
-                        as Rarity,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      shape: null == shape
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as String,
+      baseMaterial: null == baseMaterial
+          ? _value.baseMaterial
+          : baseMaterial // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      rarity: null == rarity
+          ? _value.rarity
+          : rarity // ignore: cast_nullable_to_non_nullable
+              as Rarity,
+    ) as $Val);
   }
 }
 
 /// @nodoc
 abstract class _$$FigureImplCopyWith<$Res> implements $FigureCopyWith<$Res> {
   factory _$$FigureImplCopyWith(
-    _$FigureImpl value,
-    $Res Function(_$FigureImpl) then,
-  ) = __$$FigureImplCopyWithImpl<$Res>;
+          _$FigureImpl value, $Res Function(_$FigureImpl) then) =
+      __$$FigureImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    String id,
-    String shape,
-    Map<String, dynamic> baseMaterial,
-    Rarity rarity,
-  });
+  $Res call(
+      {String id,
+      String shape,
+      Map<String, dynamic> baseMaterial,
+      Rarity rarity});
 }
 
 /// @nodoc
@@ -117,9 +106,8 @@ class __$$FigureImplCopyWithImpl<$Res>
     extends _$FigureCopyWithImpl<$Res, _$FigureImpl>
     implements _$$FigureImplCopyWith<$Res> {
   __$$FigureImplCopyWithImpl(
-    _$FigureImpl _value,
-    $Res Function(_$FigureImpl) _then,
-  ) : super(_value, _then);
+      _$FigureImpl _value, $Res Function(_$FigureImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Figure
   /// with the given fields replaced by the non-null parameter values.
@@ -131,42 +119,36 @@ class __$$FigureImplCopyWithImpl<$Res>
     Object? baseMaterial = null,
     Object? rarity = null,
   }) {
-    return _then(
-      _$FigureImpl(
-        id:
-            null == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
-                    as String,
-        shape:
-            null == shape
-                ? _value.shape
-                : shape // ignore: cast_nullable_to_non_nullable
-                    as String,
-        baseMaterial:
-            null == baseMaterial
-                ? _value._baseMaterial
-                : baseMaterial // ignore: cast_nullable_to_non_nullable
-                    as Map<String, dynamic>,
-        rarity:
-            null == rarity
-                ? _value.rarity
-                : rarity // ignore: cast_nullable_to_non_nullable
-                    as Rarity,
-      ),
-    );
+    return _then(_$FigureImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      shape: null == shape
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as String,
+      baseMaterial: null == baseMaterial
+          ? _value._baseMaterial
+          : baseMaterial // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      rarity: null == rarity
+          ? _value.rarity
+          : rarity // ignore: cast_nullable_to_non_nullable
+              as Rarity,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$FigureImpl implements _Figure {
-  const _$FigureImpl({
-    required this.id,
-    required this.shape,
-    required final Map<String, dynamic> baseMaterial,
-    required this.rarity,
-  }) : _baseMaterial = baseMaterial;
+  const _$FigureImpl(
+      {required this.id,
+      required this.shape,
+      required final Map<String, dynamic> baseMaterial,
+      required this.rarity})
+      : _baseMaterial = baseMaterial;
 
   factory _$FigureImpl.fromJson(Map<String, dynamic> json) =>
       _$$FigureImplFromJson(json);
@@ -198,22 +180,15 @@ class _$FigureImpl implements _Figure {
             other is _$FigureImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.shape, shape) || other.shape == shape) &&
-            const DeepCollectionEquality().equals(
-              other._baseMaterial,
-              _baseMaterial,
-            ) &&
+            const DeepCollectionEquality()
+                .equals(other._baseMaterial, _baseMaterial) &&
             (identical(other.rarity, rarity) || other.rarity == rarity));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    shape,
-    const DeepCollectionEquality().hash(_baseMaterial),
-    rarity,
-  );
+  int get hashCode => Object.hash(runtimeType, id, shape,
+      const DeepCollectionEquality().hash(_baseMaterial), rarity);
 
   /// Create a copy of Figure
   /// with the given fields replaced by the non-null parameter values.
@@ -225,17 +200,18 @@ class _$FigureImpl implements _Figure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FigureImplToJson(this);
+    return _$$FigureImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Figure implements Figure {
-  const factory _Figure({
-    required final String id,
-    required final String shape,
-    required final Map<String, dynamic> baseMaterial,
-    required final Rarity rarity,
-  }) = _$FigureImpl;
+  const factory _Figure(
+      {required final String id,
+      required final String shape,
+      required final Map<String, dynamic> baseMaterial,
+      required final Rarity rarity}) = _$FigureImpl;
 
   factory _Figure.fromJson(Map<String, dynamic> json) = _$FigureImpl.fromJson;
 

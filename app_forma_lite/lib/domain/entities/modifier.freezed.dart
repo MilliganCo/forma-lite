@@ -12,8 +12,7 @@ part of 'modifier.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Modifier _$ModifierFromJson(Map<String, dynamic> json) {
   return _Modifier.fromJson(json);
@@ -57,27 +56,25 @@ class _$ModifierCopyWithImpl<$Res, $Val extends Modifier>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? id = null, Object? type = null, Object? payload = null}) {
-    return _then(
-      _value.copyWith(
-            id:
-                null == id
-                    ? _value.id
-                    : id // ignore: cast_nullable_to_non_nullable
-                        as String,
-            type:
-                null == type
-                    ? _value.type
-                    : type // ignore: cast_nullable_to_non_nullable
-                        as String,
-            payload:
-                null == payload
-                    ? _value.payload
-                    : payload // ignore: cast_nullable_to_non_nullable
-                        as Map<String, dynamic>,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? id = null,
+    Object? type = null,
+    Object? payload = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      payload: null == payload
+          ? _value.payload
+          : payload // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ) as $Val);
   }
 }
 
@@ -85,9 +82,8 @@ class _$ModifierCopyWithImpl<$Res, $Val extends Modifier>
 abstract class _$$ModifierImplCopyWith<$Res>
     implements $ModifierCopyWith<$Res> {
   factory _$$ModifierImplCopyWith(
-    _$ModifierImpl value,
-    $Res Function(_$ModifierImpl) then,
-  ) = __$$ModifierImplCopyWithImpl<$Res>;
+          _$ModifierImpl value, $Res Function(_$ModifierImpl) then) =
+      __$$ModifierImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String type, Map<String, dynamic> payload});
@@ -98,45 +94,43 @@ class __$$ModifierImplCopyWithImpl<$Res>
     extends _$ModifierCopyWithImpl<$Res, _$ModifierImpl>
     implements _$$ModifierImplCopyWith<$Res> {
   __$$ModifierImplCopyWithImpl(
-    _$ModifierImpl _value,
-    $Res Function(_$ModifierImpl) _then,
-  ) : super(_value, _then);
+      _$ModifierImpl _value, $Res Function(_$ModifierImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Modifier
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? id = null, Object? type = null, Object? payload = null}) {
-    return _then(
-      _$ModifierImpl(
-        id:
-            null == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
-                    as String,
-        type:
-            null == type
-                ? _value.type
-                : type // ignore: cast_nullable_to_non_nullable
-                    as String,
-        payload:
-            null == payload
-                ? _value._payload
-                : payload // ignore: cast_nullable_to_non_nullable
-                    as Map<String, dynamic>,
-      ),
-    );
+  $Res call({
+    Object? id = null,
+    Object? type = null,
+    Object? payload = null,
+  }) {
+    return _then(_$ModifierImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      payload: null == payload
+          ? _value._payload
+          : payload // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ModifierImpl implements _Modifier {
-  const _$ModifierImpl({
-    required this.id,
-    required this.type,
-    required final Map<String, dynamic> payload,
-  }) : _payload = payload;
+  const _$ModifierImpl(
+      {required this.id,
+      required this.type,
+      required final Map<String, dynamic> payload})
+      : _payload = payload;
 
   factory _$ModifierImpl.fromJson(Map<String, dynamic> json) =>
       _$$ModifierImplFromJson(json);
@@ -171,11 +165,7 @@ class _$ModifierImpl implements _Modifier {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    type,
-    const DeepCollectionEquality().hash(_payload),
-  );
+      runtimeType, id, type, const DeepCollectionEquality().hash(_payload));
 
   /// Create a copy of Modifier
   /// with the given fields replaced by the non-null parameter values.
@@ -187,16 +177,17 @@ class _$ModifierImpl implements _Modifier {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModifierImplToJson(this);
+    return _$$ModifierImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Modifier implements Modifier {
-  const factory _Modifier({
-    required final String id,
-    required final String type,
-    required final Map<String, dynamic> payload,
-  }) = _$ModifierImpl;
+  const factory _Modifier(
+      {required final String id,
+      required final String type,
+      required final Map<String, dynamic> payload}) = _$ModifierImpl;
 
   factory _Modifier.fromJson(Map<String, dynamic> json) =
       _$ModifierImpl.fromJson;
